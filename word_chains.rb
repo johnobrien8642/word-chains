@@ -30,7 +30,6 @@ class WordChains
             else  
                 # In my version of the puzzle solution, if a dead end has been reached 
                 # than the program assumes no path could be found.
-                puts "No path could be found."
                 return false
             end
         end
