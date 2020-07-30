@@ -33,7 +33,7 @@ class WordChains
                 return false
             end
         end
-        @path
+         @path
     end
 
     def narrow_dict_params
