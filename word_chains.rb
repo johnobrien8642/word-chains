@@ -7,7 +7,7 @@ class WordChains
          # Used as placeholder to move to each new word to check for new valid words.
         @current_word = beginning_word
         @target_word = target_word  
-        words = File.readlines("dictionary.txt").map(&:chomp)
+        words = File.readlines("test_dictionary.txt").map(&:chomp)
         @dictionary = Array.new(words)
         # Narrows dictionary to be checked to only words of @current_word and @target_word length.
         @narrowed_dict = self.narrow_dict_params 
