@@ -18,6 +18,7 @@ class WordChains
   
     # finds path if path is possible
     def find_path
+        return false if @origin_word == @target_word
             # Loop runs until path includes both the originating word and target word.
         until @path.include?(@origin_word) && @path.include?(@target_word)
             # Gets all valid words for @current_word.
@@ -33,7 +34,7 @@ class WordChains
                 return false
             end
         end
-         @path
+        @path
     end
 
     def narrow_dict_params
