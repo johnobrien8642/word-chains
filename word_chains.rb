@@ -33,9 +33,7 @@ class WordChains
                 return false
             end
         end
-        puts "Path found, please observe."
-        puts @path
-
+        @path
     end
 
     def narrow_dict_params
