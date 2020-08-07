@@ -1,2 +1,2 @@
 # word-chains
-Finding all word chains for a given dictionary
+Finding n sets of word chains for a given dictionary
