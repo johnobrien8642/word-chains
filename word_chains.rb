@@ -10,7 +10,7 @@ class WordChains
         words = File.readlines("dictionary.txt").map(&:chomp)
         @dictionary = Array.new(words)
         # Narrows dictionary to be checked to only words of @current_word and @target_word length.
-        @narrowed_dict = self.narrow_dict_params 
+        @narrowed_dict = self.narrow_dict_params(@origin_word) 
         @path = [ @origin_word ]
     end
 
@@ -37,8 +37,8 @@ class WordChains
         @path
     end
 
-    def narrow_dict_params
-        narrowed_dict = @dictionary.select { |word| word.length == @origin_word.length }
+    def narrow_dict_params(origin_word)
+        narrowed_dict = @dictionary.select { |word| word.length == origin_word.length }
         narrowed_dict
     end
     
@@ -101,4 +101,6 @@ class WordChains
     end
 
 end
+
+
 
